@@ -14,7 +14,10 @@ header{text-align:center;margin-bottom:clamp(1rem,2vw,2rem)}
 header img{height:32px;margin-bottom:.75rem}
 h1{font-size:clamp(1.1rem,2.5vw,1.6rem);font-weight:700;color:#1a1a2e}
 h1 span{color:var(--accent)}
+h2.section-title{font-size:clamp(.85rem,1.8vw,1.1rem);font-weight:700;color:#1a1a2e;text-align:center;margin:clamp(1.25rem,2.5vw,2rem) 0 clamp(.75rem,1.5vw,1rem)}
+h2.section-title span{color:var(--accent)}
 .grid{display:grid;grid-template-columns:repeat(5,1fr);gap:clamp(.75rem,1.5vw,1.5rem);max-width:900px;width:100%}
+.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(.75rem,1.5vw,1.5rem);max-width:360px;width:100%}
 .card{background:var(--card-bg);border-radius:16px;padding:clamp(.75rem,1.5vw,1.25rem);text-align:center;transition:transform .2s,box-shadow .2s}
 .card:hover{transform:translateY(-4px);box-shadow:0 8px 24px rgba(250,53,123,.12)}
 .card img{width:clamp(64px,10vw,120px);height:clamp(64px,10vw,120px);border-radius:50%;border:3px solid var(--accent);object-fit:cover;margin-bottom:.5rem}
@@ -23,9 +26,12 @@ h1 span{color:var(--accent)}
 .card a{display:inline-flex;align-items:center;gap:4px;background:var(--accent);color:#fff;text-decoration:none;padding:6px 14px;border-radius:20px;font-size:clamp(.6rem,1vw,.75rem);font-weight:600;transition:background .2s}
 .card a:hover{background:var(--accent-hover)}
 .card a svg{flex-shrink:0}
+.cta{margin-top:clamp(1.25rem,2.5vw,2rem);text-align:center}
+.cta a{display:inline-flex;align-items:center;gap:6px;color:var(--accent);text-decoration:none;font-size:clamp(.75rem,1.2vw,.9rem);font-weight:600;transition:color .2s}
+.cta a:hover{color:var(--accent-hover)}
 footer{margin-top:clamp(1rem,2vw,2rem);font-size:.7rem;color:#999;text-align:center}
 @media(max-width:768px){.grid{grid-template-columns:repeat(3,1fr)}}
-@media(max-width:480px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.grid{grid-template-columns:repeat(2,1fr)}.grid-2{grid-template-columns:repeat(2,1fr)}}
 </style>
 </head>
 <body>
@@ -34,54 +40,76 @@ footer{margin-top:clamp(1rem,2vw,2rem);font-size:.7rem;color:#999;text-align:cen
   <h1>Connect with the <span>Speakers</span></h1>
 </header>
 <div class="grid">
-
-      <div class="card">
-        <img src="https://media.licdn.com/dms/image/v2/D4E03AQGy_dg4evVzKg/profile-displayphoto-crop_800_800/B4EZmhWKCgIoAM-/0/1759348565012" alt="Sinead Byrne" width="120" height="120">
-        <h2>Sinead Byrne</h2>
-        <p>CEO & Founder, Prospera</p>
-        <a href="https://ie.linkedin.com/in/byrnesinead" target="_blank" rel="noopener">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-          Connect
-        </a>
-      </div>
-      <div class="card">
-        <img src="https://media.licdn.com/dms/image/v2/C5603AQFHfo7meBrGCA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1655975339488" alt="Majella Murphy" width="120" height="120">
-        <h2>Majella Murphy</h2>
-        <p>Head of Acceleration, Furthr</p>
-        <a href="https://ie.linkedin.com/in/majellamurphy" target="_blank" rel="noopener">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-          Connect
-        </a>
-      </div>
-      <div class="card">
-        <img src="https://media.licdn.com/dms/image/v2/C4E03AQFgUX-l99iOvg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1575885588287" alt="Ronan McGrane" width="120" height="120">
-        <h2>Ronan McGrane</h2>
-        <p>Managing Partner, R McGrane & Partners</p>
-        <a href="https://www.linkedin.com/in/ronanmcgrane" target="_blank" rel="noopener">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-          Connect
-        </a>
-      </div>
-      <div class="card">
-        <img src="https://media.licdn.com/dms/image/v2/C4D03AQH-VcmCASJomg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1516518949020" alt="Ultan Sharkey" width="120" height="120">
-        <h2>Ultan Sharkey</h2>
-        <p>Managing Director, Sharkey Consulting</p>
-        <a href="https://www.linkedin.com/in/ultansharkey" target="_blank" rel="noopener">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-          Connect
-        </a>
-      </div>
-      <div class="card">
-        <img src="https://media.licdn.com/dms/image/v2/D4E03AQEh9WRd0jz7uQ/profile-displayphoto-crop_800_800/B4EZnC.S5GKgAI-/0/1759912734831" alt="Adrian Florian" width="120" height="120">
-        <h2>Adrian Florian</h2>
-        <p>Co-CEO, Wolfpack Digital</p>
-        <a href="https://www.linkedin.com/in/adrian-florian-006b6242/" target="_blank" rel="noopener">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-          Connect
-        </a>
-      </div>
+  <div class="card">
+    <img src="img/sinead-byrne.jpg" alt="Sinead Byrne" width="120" height="120">
+    <h2>Sinead Byrne</h2>
+    <p>CEO &amp; Founder, Prospera</p>
+    <a href="https://ie.linkedin.com/in/byrnesinead" target="_blank" rel="noopener">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      Connect
+    </a>
+  </div>
+  <div class="card">
+    <img src="img/majella-murphy.jpg" alt="Majella Murphy" width="120" height="120">
+    <h2>Majella Murphy</h2>
+    <p>Head of Acceleration, Furthr</p>
+    <a href="https://ie.linkedin.com/in/majellamurphy" target="_blank" rel="noopener">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      Connect
+    </a>
+  </div>
+  <div class="card">
+    <img src="img/ronan-mcgrane.jpg" alt="Ronan McGrane" width="120" height="120">
+    <h2>Ronan McGrane</h2>
+    <p>Managing Partner, R McGrane &amp; Partners</p>
+    <a href="https://www.linkedin.com/in/ronanmcgrane" target="_blank" rel="noopener">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      Connect
+    </a>
+  </div>
+  <div class="card">
+    <img src="img/ultan-sharkey.jpg" alt="Ultan Sharkey" width="120" height="120">
+    <h2>Ultan Sharkey</h2>
+    <p>Managing Director, Sharkey Consulting</p>
+    <a href="https://www.linkedin.com/in/ultansharkey" target="_blank" rel="noopener">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      Connect
+    </a>
+  </div>
+  <div class="card">
+    <img src="img/adrian-florian.jpg" alt="Adrian Florian" width="120" height="120">
+    <h2>Adrian Florian</h2>
+    <p>Co-CEO, Wolfpack Digital</p>
+    <a href="https://www.linkedin.com/in/adrian-florian-006b6242/" target="_blank" rel="noopener">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      Connect
+    </a>
+  </div>
 </div>
-<div style="margin-top:clamp(1.25rem,2.5vw,2rem);text-align:center"><a href="https://www.wolfpack-digital.com/?utm_source=breakfast-and-insights&utm_medium=event&utm_campaign=connect-with-speakers" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;color:var(--accent);text-decoration:none;font-size:clamp(.75rem,1.2vw,.9rem);font-weight:600;transition:color .2s">See more about Wolfpack Digital &rarr;</a></div>
+
+<h2 class="section-title">Connect with <span>Wolfpack Digital</span></h2>
+<div class="grid-2">
+  <div class="card">
+    <img src="img/valentin-trif.jpg" alt="Valentin Trif" width="120" height="120">
+    <h2>Valentin Trif</h2>
+    <p>Head of Business Development, Wolfpack Digital</p>
+    <a href="https://www.linkedin.com/in/valentin-trif/" target="_blank" rel="noopener">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      Connect
+    </a>
+  </div>
+  <div class="card">
+    <img src="img/gabriel-olariu.jpg" alt="Gabriel Olariu" width="120" height="120">
+    <h2>Gabriel Olariu</h2>
+    <p>Business Development Manager, Wolfpack Digital</p>
+    <a href="https://www.linkedin.com/in/gabriel-olariu/" target="_blank" rel="noopener">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      Connect
+    </a>
+  </div>
+</div>
+
+<div class="cta"><a href="https://www.wolfpack-digital.com/?utm_source=breakfast-and-insights&utm_medium=event&utm_campaign=connect-with-speakers" target="_blank" rel="noopener">See more about Wolfpack Digital &rarr;</a></div>
 <footer><a href="https://www.wolfpack-digital.com/?utm_source=breakfast-and-insights&utm_medium=event&utm_campaign=connect-with-speakers" target="_blank" rel="noopener" style="color:inherit;text-decoration:none">Wolfpack Digital</a> &middot; Breakfast &amp; Insights 2026</footer>
 </body>
 </html>
